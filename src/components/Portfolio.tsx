@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MapPin, Edit2, Plus, ExternalLink, Moon, Sun, ChevronDown, Calendar, Github, Globe, Linkedin } from 'lucide-react';
+import { MapPin, ExternalLink, Moon, Sun, Calendar, Github, Globe, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Portfolio = () => {
@@ -29,14 +29,16 @@ const certifications = [
       issuer: "HackerRank",
       date: "Sep 2022",
       credentialId: "0d84ba80ad77",
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1740614400&v=beta&t=fRK-PLUQToh0mSskYusfT_aepYqO_4Q66k7OjqC_U8c"
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1740614400&v=beta&t=fRK-PLUQToh0mSskYusfT_aepYqO_4Q66k7OjqC_U8c",
+      link: "https://www.hackerrank.com/certificates/0d84ba80ad77"
     },
     {
       title: "JavaScript Basic",
       issuer: "HackerRank",
       date: "Jul 2022",
       credentialId: "15e9da960d39",
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1740614400&v=beta&t=fRK-PLUQToh0mSskYusfT_aepYqO_4Q66k7OjqC_U8c"
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1740614400&v=beta&t=fRK-PLUQToh0mSskYusfT_aepYqO_4Q66k7OjqC_U8c",
+      link : "https://www.hackerrank.com/certificates/15e9da960d39"
     }
   ];
 
@@ -169,7 +171,7 @@ const certifications = [
                   isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                 }`}
               >
-                <Edit2 size={20} />
+                {/* <Edit2 size={20} /> */}
               </motion.button>
             </div>
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -197,7 +199,7 @@ const certifications = [
                   isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                 }`}
               >
-                <Plus size={20} />
+                {/* <Plus size={20} /> */}
               </motion.button>
               <motion.button 
                 whileHover={{ scale: 1.1 }}
@@ -206,7 +208,7 @@ const certifications = [
                   isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                 }`}
               >
-                <Edit2 size={20} />
+                {/* <Edit2 size={20} /> */}
               </motion.button>
             </div>
           </div>
@@ -269,7 +271,7 @@ const certifications = [
                     isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                   }`}
                 >
-                  <Plus size={20} />
+                  {/* <Plus size={20} /> */}
                 </motion.button>
                 <motion.button 
                   whileHover={{ scale: 1.1 }}
@@ -278,7 +280,7 @@ const certifications = [
                     isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                   }`}
                 >
-                  <Edit2 size={20} />
+                  {/* <Edit2 size={20} /> */}
                 </motion.button>
               </div>
             </div>
@@ -331,14 +333,14 @@ const certifications = [
                 </motion.div>
               ))}
             </div>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               className={`mt-4 text-sm flex items-center gap-1 ${
                 isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'
               }`}
             >
               Show all 6 projects <ChevronDown size={14} />
-            </motion.button>
+            </motion.button> */}
           </motion.section>
 
         {/* Skills Section */}
@@ -358,7 +360,7 @@ const certifications = [
                 isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
               }`}
             >
-              <Edit2 size={20} />
+              {/* <Edit2 size={20} /> */}
             </motion.button>
           </div>
           
@@ -410,7 +412,7 @@ const certifications = [
                     isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                   }`}
                 >
-                  <Plus size={20} />
+                  {/* <Plus size={20} /> */}
                 </motion.button>
                 <motion.button 
                   whileHover={{ scale: 1.1 }}
@@ -419,7 +421,7 @@ const certifications = [
                     isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
                   }`}
                 >
-                  <Edit2 size={20} />
+                  {/* <Edit2 size={20} /> */}
                 </motion.button>
               </div>
             </div>
@@ -453,7 +455,7 @@ const certifications = [
                         isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'
                       }`}
                     >
-                      Show credential <ExternalLink size={14} />
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer">Show credential</a><ExternalLink size={14} />
                     </motion.button>
                   </div>
                 </motion.div>

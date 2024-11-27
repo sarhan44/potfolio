@@ -1,16 +1,16 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapPin, Edit2, Plus, ExternalLink, Moon, Sun, ChevronDown, Calendar, Github, Globe, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Portfolio = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
-    const [expandedSection, setExpandedSection] = useState(null);
-    const [showMore, setShowMore] = useState({});
+    // const [expandedSection, setExpandedSection] = useState(null);
+    // const [showMore, setShowMore] = useState({});
     
-    const toggleShowMore = (id) => {
-    setShowMore(prev => ({ ...prev, [id]: !prev[id] }));
-};
+    // const toggleShowMore = (id) => {
+    // setShowMore(prev => ({ ...prev, [id]: !prev[id] }));
+    // };
 
 const skills = [
   { name: 'Node.js', level: 90 },
@@ -284,7 +284,7 @@ const certifications = [
             </div>
 
             <div className="space-y-6">
-              {projects.map((project, index) => (
+              {projects.map((project, _index) => (
                 <motion.div
                   key={project.title}
                   whileHover={{ scale: 1.01 }}
@@ -425,7 +425,7 @@ const certifications = [
             </div>
 
             <div className="space-y-6">
-              {certifications.map((cert, index) => (
+              {certifications.map((cert, _index) => (
                 <motion.div
                   key={cert.credentialId}
                   whileHover={{ scale: 1.01 }}
